@@ -7,8 +7,19 @@
   - `npm run test-anagram`
 */
 
-function isAnagram(str1, str2) {
 
+function sort(anagram){
+  var array2 = anagram.split(""); // This says split the string whenever we get space between two words.(given a delimeter as which is used as reference after which )
+  var array3 = array2.sort();
+  var array4 = array3.join("");
+  return array4;
 }
-
+function isAnagram(str1 , str2){
+  if(sort(str1) == sort(str2)){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
 module.exports = isAnagram;
